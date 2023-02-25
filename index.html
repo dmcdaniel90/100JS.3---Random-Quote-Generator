@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Random Quote Generator</title>
+
+  <link rel="stylesheet" href="styles.css">
+
+  <meta name="description" content="Page description">
+
+  <link rel="icon" href="/favicon.ico">
+  
+</head>
+
+<body>
+  <div class="container">
+    <button class="quote-button">Generate</button>
+    <blockquote class="quote-element">
+      <p class="quote-text">This is a quote</p> <!--Style this text-->
+      <p class="quote-author">Author</p>  <!--Style this text-->
+    </blockquote>
+  </div>
+  <script>
+    'use strict'
+
+    const quoteButton = document.querySelector("quote-button");
+    const quoteText = document.querySelector("quote-text");
+    const quoteAuthor = document.querySelector("quote-author");
+
+    async function getNewQuote() {
+      await let res = fetch("https://stoic-server.herokuapp.com/search/searchterm");
+      await let processedRes = res.json()
+
+      console.log(processedRes)
+    }
+
+    quoteButton.addEventListener('click', getNewQuote);
+  </script>
+</body>
+</html>
