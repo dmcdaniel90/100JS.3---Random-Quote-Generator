@@ -22,21 +22,6 @@
       <p class="quote-author">Author</p>  <!--Style this text-->
     </blockquote>
   </div>
-  <script>
-    'use strict'
-
-    const quoteButton = document.querySelector("quote-button");
-    const quoteText = document.querySelector("quote-text");
-    const quoteAuthor = document.querySelector("quote-author");
-
-    async function getNewQuote() {
-      await let res = fetch("https://stoic-server.herokuapp.com/search/searchterm");
-      await let processedRes = res.json()
-
-      console.log(processedRes)
-    }
-
-    quoteButton.addEventListener('click', getNewQuote);
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
