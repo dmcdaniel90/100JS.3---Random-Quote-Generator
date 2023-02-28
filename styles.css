@@ -36,9 +36,12 @@ body {
 
 .quote-text {
   font-size: 1.3em;
+  color: white;
 }
 
 .quote-author {
   font-size: 1em;
+  color: white;
+  text-align: right;
 }
 
